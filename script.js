@@ -31,12 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
         previewValue = ""
         currentValue = ""
         operator = ""
-        previousScreen.textContent = currentValue;
+        previousScreen.textContent = "";
         currentScreen.textContent = 0;
     });
 
     equal.addEventListener("click", function(){
         calculate();
+        previousScreen.textContent = "";
+        currentScreen.textContent = previewValue;
+    })
+
+    decmial.addEventListener("click", function(){
+        if(!currentValue.includes(".")){
+            currentValue += ".";}
     })
 })
 
@@ -62,5 +69,11 @@ function calculate(){
         previewValue *= currentValue;}
     else if (operator == "+"){
         previewValue += currentValue;}
-    console.log(previewValue)
+    previewValue = roundNumber(previewValue).toString();
+    currentValue = previewValue.toString();
+
+}
+
+function roundNumber(num){
+    return Math.round(num * 1000) / 1000;
 }
