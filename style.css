@@ -49,10 +49,23 @@ div.button-grid{
     padding-bottom: 0;
 }
 
-.btn{
+.btn, #cleanElement,#clean{
     border: 2px solid black;
     padding: 15px;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.lastScreen, .currentScreen{
+    text-align: right;
+    height: 45px;
+}
+
+.lastScreen{
+    font-size: 15px;
+}
+.currentScreen{
+    font-size: 25px;
+    font-weight: bold;
 }
