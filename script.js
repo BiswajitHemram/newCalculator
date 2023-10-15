@@ -18,10 +18,22 @@ document.addEventListener("DOMContentLoaded", function() {
         if(currentValue.length <= 5){
             handleNumber(+event.target.textContent)
             currentScreen.textContent = currentValue;
-        }
+        };
+    }));
+
+    operators.forEach((operators) => operators.addEventListener("click" , function(e){
+        handleOperators(e.target.textContent)
+        previousScreen.textContent = `${previewValue} ${operator}`;
+        currentScreen.textContent = currentValue;
     }))
 })
 
 function handleNumber(num){
     currentValue += num;
+}
+
+function handleOperators(op){
+    operator = op;
+    previewValue = currentValue;
+    currentValue = "";
 }
