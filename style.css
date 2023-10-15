@@ -39,7 +39,7 @@ div.button-grid{
     grid-gap: 10px;
 }
 
-.zeroBtn{
+.zeroBtn, #clean{
     grid-column: 1/span 2;
 }
 
@@ -69,3 +69,24 @@ div.button-grid{
     font-size: 25px;
     font-weight: bold;
 }
+
+#clean:hover{
+    background-color: rgb(33, 226, 75);
+    color: #fff;
+}
+
+.opeator:hover, .equalBtn:hover{
+    background-color: rgb(40, 41, 40);
+    color: #fff;
+}
+
+#decimal:hover{
+    background-color: rgb(202, 96, 219);
+    color: #fff;
+}
+
+.number:hover{
+    background-color: rgb(247, 3, 3);
+    color: #fff;
+}
+
