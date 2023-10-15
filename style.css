@@ -90,3 +90,16 @@ div.button-grid{
     color: #fff;
 }
 
+footer{
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(213, 86, 86);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+footer > p > a{
+    text-decoration: none;
+    color: #fff;
+}
