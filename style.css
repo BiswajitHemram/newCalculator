@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+div.calculator{
+    width: 450px;
+    border: 1px solid black;
+    height: 500px;
+}
