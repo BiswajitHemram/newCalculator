@@ -5,7 +5,7 @@ let operator = "";
 document.addEventListener("DOMContentLoaded", function() {
     // storing html components on js
     let clean = document.querySelector("#clean");
-    let equal = document.querySelector("#equalBtn");
+    let equal = document.querySelector(".equalBtn");
     let decmial = document.querySelector("#decimal");
 
     let numbers = document.querySelectorAll(".number")
@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         operator = ""
         previousScreen.textContent = currentValue;
         currentScreen.textContent = 0;
+    });
+
+    equal.addEventListener("click", function(){
+        calculate();
     })
 })
 
@@ -44,4 +48,19 @@ function handleOperators(op){
     operator = op;
     previewValue = currentValue;
     currentValue = "";
+}
+
+function calculate(){
+    previewValue = Number(previewValue);
+    currentValue = Number(currentValue);
+
+    if (operator == "/"){
+        previewValue /= currentValue;}
+    else if (operator == "-"){
+       previewValue -= currentValue}
+    else if (operator == "*"){
+        previewValue *= currentValue;}
+    else if (operator == "+"){
+        previewValue += currentValue;}
+    console.log(previewValue)
 }
